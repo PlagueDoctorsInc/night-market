@@ -1,6 +1,6 @@
 import { ConnectButton, useAccount } from '@web3modal/react'
-import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import NewUser from '../components/NewUser'
 
 const Home = () => {
   const { address, connector, isConnected } = useAccount()
@@ -22,6 +22,7 @@ const Home = () => {
         <h1>NIGHT MARKET</h1>
         <h3>Find your Web3 people.</h3>
       </div>
+      <NewUser />
     </>
   )
 }

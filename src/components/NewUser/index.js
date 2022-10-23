@@ -1,6 +1,14 @@
+import { useRef } from 'react'
 import styles from './styles.css.modules'
 
 export default function NewUser() {
+  const category = useRef('')
+  const handleChange = (event) => {
+    category.current = event.target.value
+    console.log(category.current)
+  }
+
+
   return (
     <div>
       <div className={styles.container}>
@@ -10,6 +18,8 @@ export default function NewUser() {
           className={styles.radio}
           value='developer'
           id='developer'
+          name='category'
+          onChange={handleChange}
         />
         <label htmlFor='developer'>Developer</label>
         <input
@@ -17,6 +27,8 @@ export default function NewUser() {
           className={styles.radio}
           value='artist'
           id='artist'
+          name='category'
+          onChange={handleChange}
         />
         <label htmlFor='artist'>Artist</label>
         <input
@@ -24,6 +36,8 @@ export default function NewUser() {
           className={styles.radio}
           value='marketing'
           id='marketing'
+          name='category'
+          onChange={handleChange}
         />
         <label htmlFor='marketing'>Marketing</label>
         <input
@@ -31,6 +45,8 @@ export default function NewUser() {
           className={styles.radio}
           value='manager'
           id='manager'
+          name='category'
+          onChange={handleChange}
         />
         <label htmlFor='manager'>Manager</label>
         <input
@@ -38,6 +54,8 @@ export default function NewUser() {
           className={styles.radio}
           value='advisor'
           id='advisor'
+          name='category'
+          onChange={handleChange}
         />
         <label htmlFor='advisor'>Advisor</label>
         <input
@@ -45,6 +63,8 @@ export default function NewUser() {
           className={styles.radio}
           value='trader'
           id='trader'
+          name='category'
+          onChange={handleChange}
         />
         <label htmlFor='trader'>Trader</label>
       </div>

@@ -12,13 +12,20 @@ export default function NewUser() {
 
   return (
     <div>
-      {page === 0 ? 
-      <Radio handleChange={handleChange} /> :
-      <About name={'gavin'} job={'Fullstack Web3 Dev'}/>
-    }
-      <button className={styles.continueBtn} onClick={() => {
-        setPage(page + 1)
-      }}>Continue</button>
+      {page === 0 ? (
+        <Radio handleChange={handleChange} />
+      ) : (
+        <About name={'gavin'} job={'Fullstack Web3 Dev'} />
+      )}
+      <button
+        className={styles.continueBtn}
+        onClick={() => {
+          if (category.current === '') return
+          setPage(page + 1)
+        }}
+      >
+        Continue
+      </button>
     </div>
   )
 }
